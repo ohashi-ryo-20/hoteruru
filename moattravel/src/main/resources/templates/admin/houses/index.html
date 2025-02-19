@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org">
 
 <head>
-	<div th:replace="~(fragment :: meta)"></div>
+	<div th:replace="~{fragment :: meta}"></div>
 	<!--Bootstrap-->
 	<!--Google Fonts-->
-	<div th:replace="~{fragment :: style}"></di>
+	<div th:replace="~{fragment :: styles}"></div>
 	<title>民宿一覧</title>
 </head>
 
@@ -27,7 +27,10 @@
 											class="btn text-white shadow-sm moattravel-btn">検索</button>
 									</div>
 								</form>
-							<a href="#" class="btn text-white shadow-sm mb-3 moattravel-btn">登録</a>
+							<a th:href="@{/admin/houses/register}" class="btn text-white shadow-sm mb-3 moattravel-btn">登録</a>
+						</div>
+						<div th:if="${successMessage}" class="alert alert-info">
+							
 						</div>
 						<table class="table">
 							<thead>
