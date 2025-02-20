@@ -28,6 +28,9 @@ public class User {
 	@Column(name = "furigana")
 	private String furigana;
 	
+	@Column(name = "postalCode")
+	private String postalCode;
+	
 	@Column(name = "address")
 	private String address;
 	
